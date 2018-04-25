@@ -29,10 +29,12 @@ void BasePlusCommissionEmployee::CalculateIncome()
 
 void BasePlusCommissionEmployee::Show()
 {
-	cout << "姓名:" << endl;
+	cout << "雇员姓名:" << endl;
 	cout << BEname << endl;
-	cout << "ID:" << endl;
+	cout << "雇员ID:" << endl;
 	cout << BEid << endl;
+	cout << "销售量" << endl;
+	cout << goodsnumber << endl;
 	cout << "底薪:" << endl;
 	cout << laseincome << endl;
 	cout << "总工资:" << endl;

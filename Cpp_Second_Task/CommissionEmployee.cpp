@@ -29,10 +29,12 @@ void CommissionEmployee::CalculateIncome()
 
 void CommissionEmployee::Show()
 {
-	cout << "姓名:" << endl;
+	cout << "雇员姓名:" << endl;
 	cout << CEname << endl;
-	cout << "ID:" << endl;
+	cout << "雇员ID:" << endl;
 	cout << CEid << endl;
+	cout << "销售量" << endl;
+	cout << goodsnumber << endl;
 	cout << "总工资:" << endl;
 	cout << income << endl;
 }

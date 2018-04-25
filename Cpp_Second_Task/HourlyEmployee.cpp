@@ -43,9 +43,9 @@ void HourlyEmployee::CalculateIncome()
 
 void HourlyEmployee::Show()
 {
-	cout << "姓名:" << endl;
+	cout << "雇员姓名:" << endl;
 	cout << HEname << endl;
-	cout << "ID:" << endl;
+	cout << "雇员ID:" << endl;
 	cout << HEid << endl;
 	cout << "工作时长:" << endl;
 	cout << Worktime << endl;
