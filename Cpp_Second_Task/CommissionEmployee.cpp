@@ -6,11 +6,21 @@ CommissionEmployee::CommissionEmployee()
 {
 	cout << "请输入该佣金雇员的销售量" << endl;
 	cin >> goodsnumber;
+	if (goodsnumber < 0)
+	{
+		cout << "输入的销售量小于0请重新输入" << endl;
+		cin >> goodsnumber;
+	}
 	cout << "请输入商品价格" << endl;
 	cin >> price;
+	if (price < 0)
+	{
+		cout << "输入的价格小于0请重新输入" << endl;
+		cin >> price;
+	}
 	income = goodsnumber * price;
-	cout << "该佣金雇员的薪资的为:" << endl;
-	cout << income << endl;
+	//cout << "该佣金雇员的薪资的为:" << endl;
+	//cout << income << endl;
 }
 
 CommissionEmployee::CommissionEmployee(int num)
@@ -18,14 +28,14 @@ CommissionEmployee::CommissionEmployee(int num)
 	goodsnumber = num;
 }
 
-void CommissionEmployee::CalculateIncome()
-{
-	cout << "请输入商品价格" << endl;
-	cin >> price;
-	income = goodsnumber * price;
-	cout << "该佣金雇员的薪资的为:" << endl;
-	cout << income << endl;
-}
+//void CommissionEmployee::CalculateIncome()
+//{
+//	cout << "请输入商品价格" << endl;
+//	cin >> price;
+//	income = goodsnumber * price;
+//	cout << "该佣金雇员的薪资的为:" << endl;
+//	cout << income << endl;
+//}
 
 void CommissionEmployee::Show()
 {

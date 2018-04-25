@@ -87,21 +87,24 @@ public:
 
 private:
 	float income;
-	int goodsnumber;//商品种类
+	/*int goodsnumber;*///商品种类
 	//char *goods = new char[goodsnumber];//每种商品名字
 	/*float *goodsprice = new float[goodsnumber];*///每种商品价钱
-	float price;
+	//float price;
 	//int *goodsales = new int[goodsnumber];//每种商品销售量
 	string CEname = Employee::EmployeeName;
 	int CEid = Employee::EmployeeID;
 	//int salesnumber = 0;
+protected:
+	float price;
+	int goodsnumber;
 
 
 
 };
 
 
-class BasePlusCommissionEmployee : public Employee
+class BasePlusCommissionEmployee : public CommissionEmployee
 {
 public:
 
@@ -116,7 +119,7 @@ public:
 private:
 	float income;
 
-	int goodsnumber;//商品种类
+	int goodsnumber = CommissionEmployee::goodsnumber;//商品数量
 
 	/*char *goods = new char[goodsnumber];*///每种商品名字
 
@@ -124,9 +127,9 @@ private:
 
 	//int *goodsales = new int[goodsnumber];//每种商品销售量
 
-	float price;
+	float price = CommissionEmployee::price;
 
-	int laseincome = 500;//底薪
+	int laseincome ;//底薪
 
 	string BEname = Employee::EmployeeName;
 
