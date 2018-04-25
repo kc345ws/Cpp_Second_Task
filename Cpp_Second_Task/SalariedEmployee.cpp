@@ -21,11 +21,11 @@ SalariedEmployee::SalariedEmployee(float im)
 
 void SalariedEmployee::Show()
 {
-	cout << "该周薪雇员姓名为" << endl;
+	cout << "姓名:" << endl;
 	cout << SEname << endl;
-	cout << "该周薪雇员ID为:" << endl;
+	cout << "ID:" << endl;
 	cout << SEid << endl;
-	cout << "该周薪雇员总工资为:" << endl;
+	cout << "总工资:" << endl;
 	cout << SalariedEmployee::income << endl;
 }
 

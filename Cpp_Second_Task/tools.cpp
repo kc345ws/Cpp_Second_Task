@@ -77,7 +77,7 @@ void ShowEmployee()
 	vector<BasePlusCommissionEmployee>::iterator iter3 = BE.begin();
 	for (iter3; iter3 != BE.end(); iter3++)
 	{
-		cout << "第" << i << "位佣金雇员信息:" << endl;
+		cout << "第" << i << "位带底薪佣金雇员信息:" << endl;
 		iter3->Show();
 		i++;
 	}

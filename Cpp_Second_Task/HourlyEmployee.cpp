@@ -43,10 +43,12 @@ void HourlyEmployee::CalculateIncome()
 
 void HourlyEmployee::Show()
 {
-	cout << "该时薪雇员姓名为" << endl;
+	cout << "姓名:" << endl;
 	cout << HEname << endl;
-	cout << "该时薪雇员ID为:" << endl;
+	cout << "ID:" << endl;
 	cout << HEid << endl;
-	cout << "该时薪雇员总工资为:" << endl;
+	cout << "工作时长:" << endl;
+	cout << Worktime << endl;
+	cout << "工资:" << endl;
 	cout << income << endl;
 }
