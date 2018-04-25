@@ -1,0 +1,52 @@
+#include"Employee.h"
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+
+HourlyEmployee::HourlyEmployee()
+{
+	cout << "输入该时薪雇员的工作时间" << endl;
+	cin >> Worktime;
+	cout << "输入该时薪雇员每小时的工资" << endl;
+	cin >> HourlyIncome;
+	if (Worktime < 40)
+		income = Worktime * HourlyIncome;
+
+	else
+		income = 40 * HourlyIncome + (Worktime - 40)*HourlyIncome*1.5;
+}
+
+HourlyEmployee::HourlyEmployee(int time,float hi)
+{
+	HourlyEmployee::Worktime = time;
+	HourlyEmployee::HourlyIncome = hi;
+}
+
+void HourlyEmployee::PrintfIncome()
+{
+	cout << "该时薪雇员总工资为:" << endl;
+	cout << HourlyEmployee::income << endl;
+
+}
+
+
+void HourlyEmployee::CalculateIncome()
+{
+	if (Worktime < 40)
+		income = Worktime * HourlyIncome;
+
+	else
+		income = 40 * HourlyIncome + (Worktime - 40)*HourlyIncome*1.5;
+}
+
+void HourlyEmployee::Show()
+{
+	cout << "该时薪雇员姓名为" << endl;
+	cout << HEname << endl;
+	cout << "该时薪雇员ID为:" << endl;
+	cout << HEid << endl;
+	cout << "该时薪雇员总工资为:" << endl;
+	cout << income << endl;
+}
