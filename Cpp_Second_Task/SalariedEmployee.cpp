@@ -20,7 +20,7 @@ void SalariedEmployee::Show()
 	cout << income << endl;
 	if (Birthday.ChechBirthday())
 	{
-		cout << "生日快乐！今天是这位员工生日，奖励100元基本工资提升10%" << endl;
+		cout << "生日快乐！奖励100元基本工资提升10%" << endl;
 		income = 100 + 1.1*income;
 		cout << "新的工资:" << endl;
 		cout << income << endl;

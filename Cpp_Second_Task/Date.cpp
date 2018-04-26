@@ -27,7 +27,7 @@ bool Date::ChechBirthday()
 	time_t timer;
 	time(&timer);
 	tm* t_tm = localtime(&timer);
-	if (t_tm->tm_mon+1 == month && t_tm->tm_mday == day)
+	if (t_tm->tm_mon+1 == month)
 		return true;
 	else
 		return false;
