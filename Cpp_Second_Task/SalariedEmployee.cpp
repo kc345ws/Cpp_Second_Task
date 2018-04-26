@@ -1,5 +1,6 @@
 #include"Employee.h"
 #include<iostream>
+#include"Date.h"
 using namespace std;
 
 SalariedEmployee::SalariedEmployee()
@@ -8,19 +9,23 @@ SalariedEmployee::SalariedEmployee()
 	cin >> SalariedEmployee::income;
 }
 
-SalariedEmployee::SalariedEmployee(float im)
-{
-	SalariedEmployee::income = im;
-}
-
 void SalariedEmployee::Show()
 {
 	cout << "雇员姓名:" << endl;
-	cout << SEname << endl;
+	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;
-	cout << SEid << endl;
+	cout << EmployeeID << endl;
+	Birthday.ShowBirthday();
 	cout << "总工资:" << endl;
-	cout << SalariedEmployee::income << endl;
+	cout << income << endl;
+	if (Birthday.ChechBirthday())
+	{
+		cout << "生日快乐！今天是这位员工生日，奖励100元基本工资提升10%" << endl;
+		income = 100 + 1.1*income;
+		cout << "新的工资:" << endl;
+		cout << income << endl;
+	}
+
 }
 
 

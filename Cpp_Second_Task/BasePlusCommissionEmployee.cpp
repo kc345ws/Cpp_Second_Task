@@ -13,30 +13,25 @@ BasePlusCommissionEmployee::BasePlusCommissionEmployee()
 	cout << income << endl;
 }
 
-BasePlusCommissionEmployee::BasePlusCommissionEmployee(int num)
-{
-	goodsnumber = num;
-}
-
-//void BasePlusCommissionEmployee::CalculateIncome()
-//{
-//	cout << "请输入商品价格:" << endl;
-//	cin >> price;
-//	income = laseincome + goodsnumber * price;
-//	cout << "该带底薪佣金雇员的总工资为:" << endl;
-//	cout << income << endl;
-//}
 
 void BasePlusCommissionEmployee::Show()
 {
 	cout << "雇员姓名:" << endl;
-	cout << BEname << endl;
+	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;
-	cout << BEid << endl;
+	cout << EmployeeID << endl;
+	Birthday.ShowBirthday();
 	cout << "销售量" << endl;
 	cout << goodsnumber << endl;
 	cout << "底薪:" << endl;
 	cout << laseincome << endl;
 	cout << "总工资:" << endl;
 	cout << income << endl;
+	if (Birthday.ChechBirthday())
+	{
+		cout << "生日快乐！今天是这位员工生日，奖励100元基本工资提升10%" << endl;
+		income = 100 + 1.1*income;
+		cout << "新的工资:" << endl;
+		cout << income << endl;
+	}
 }

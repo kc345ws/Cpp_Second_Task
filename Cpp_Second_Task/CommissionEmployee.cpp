@@ -23,28 +23,24 @@ CommissionEmployee::CommissionEmployee()
 	//cout << income << endl;
 }
 
-CommissionEmployee::CommissionEmployee(int num)
-{
-	goodsnumber = num;
-}
 
-//void CommissionEmployee::CalculateIncome()
-//{
-//	cout << "请输入商品价格" << endl;
-//	cin >> price;
-//	income = goodsnumber * price;
-//	cout << "该佣金雇员的薪资的为:" << endl;
-//	cout << income << endl;
-//}
 
 void CommissionEmployee::Show()
 {
 	cout << "雇员姓名:" << endl;
-	cout << CEname << endl;
+	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;
-	cout << CEid << endl;
+	cout << EmployeeID << endl;
+	Birthday.ShowBirthday();
 	cout << "销售量" << endl;
 	cout << goodsnumber << endl;
 	cout << "总工资:" << endl;
 	cout << income << endl;
+	if (Birthday.ChechBirthday())
+	{
+		cout << "生日快乐！今天是这位员工生日，奖励100元基本工资提升10%" << endl;
+		income = 100 + 1.1*income;
+		cout << "新的工资:" << endl;
+		cout << income << endl;
+	}
 }

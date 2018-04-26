@@ -10,13 +10,7 @@ Employee::Employee()
 	cin >> EmployeeID;
 }
 
-Employee::Employee(char name , int id)
-{
-	EmployeeName = name;
-	EmployeeID = id;
-}
-
-void Employee::PrintfEmployee()
+void Employee::Show()
 {
 	cout << "该雇员姓名为:" << endl;
 	cout << Employee::EmployeeName << endl;
