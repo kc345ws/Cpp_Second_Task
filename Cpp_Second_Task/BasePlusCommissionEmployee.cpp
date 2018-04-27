@@ -11,11 +11,13 @@ BasePlusCommissionEmployee::BasePlusCommissionEmployee()
 	income = laseincome + goodsnumber * price;
 	cout << "该带底薪佣金雇员的总工资为:" << endl;
 	cout << income << endl;
+
 }
 
 
 void BasePlusCommissionEmployee::Show()
 {
+	cout << "雇员类型:带底薪的佣金雇员" << endl;
 	cout << "雇员姓名:" << endl;
 	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;

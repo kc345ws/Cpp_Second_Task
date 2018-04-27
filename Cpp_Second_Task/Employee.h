@@ -13,7 +13,6 @@ public:
 
 	virtual void Show();
 
-
 protected:
 
 	string EmployeeName;
@@ -21,6 +20,8 @@ protected:
 	int EmployeeID;
 
 	float income;
+
+private:
 
 
 };
@@ -38,7 +39,6 @@ public:
 private:
 
 	Date Birthday;
-
 
 };
 
@@ -72,7 +72,6 @@ public:
 
 private:
 
-	
 
 protected:
 
@@ -96,7 +95,6 @@ public:
 private:
 
 	int laseincome ;//µ×Ð½
-
 
 };
 #endif

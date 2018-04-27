@@ -7,10 +7,12 @@ SalariedEmployee::SalariedEmployee()
 {
 	cout << "输入该周薪雇员的工资" << endl;
 	cin >> SalariedEmployee::income;
+
 }
 
 void SalariedEmployee::Show()
 {
+	cout << "雇员类型:周薪雇员" << endl;
 	cout << "雇员姓名:" << endl;
 	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;

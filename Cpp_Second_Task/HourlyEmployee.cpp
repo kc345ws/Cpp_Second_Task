@@ -25,12 +25,14 @@ HourlyEmployee::HourlyEmployee()
 		income = Worktime * HourlyIncome;
 	else
 		income = 40 * HourlyIncome + (Worktime - 40)*HourlyIncome*1.5;
+
 }
 
 
 
 void HourlyEmployee::Show()
 {
+	cout << "雇员类型:时薪雇员" << endl;
 	cout << "雇员姓名:" << endl;
 	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;

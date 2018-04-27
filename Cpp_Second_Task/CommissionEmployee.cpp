@@ -19,6 +19,7 @@ CommissionEmployee::CommissionEmployee()
 		cin >> price;
 	}
 	income = goodsnumber * price;
+
 	//cout << "该佣金雇员的薪资的为:" << endl;
 	//cout << income << endl;
 }
@@ -27,6 +28,7 @@ CommissionEmployee::CommissionEmployee()
 
 void CommissionEmployee::Show()
 {
+	cout << "雇员类型:佣金雇员" << endl;
 	cout << "雇员姓名:" << endl;
 	cout << EmployeeName << endl;
 	cout << "雇员ID:" << endl;
