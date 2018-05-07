@@ -11,15 +11,19 @@ public:
 
 	Employee();
 
-	virtual void Show();
+	virtual void Show() = 0;
 
 protected:
-
+	
 	string EmployeeName;
 
 	int EmployeeID;
 
 	float income;
+
+	friend void FindID();
+
+	friend void FindName();
 
 private:
 
@@ -97,4 +101,5 @@ private:
 	int laseincome ;//µ×Ð½
 
 };
+
 #endif

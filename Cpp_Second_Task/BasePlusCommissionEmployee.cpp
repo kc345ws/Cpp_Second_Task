@@ -15,6 +15,7 @@ BasePlusCommissionEmployee::BasePlusCommissionEmployee()
 }
 
 
+
 void BasePlusCommissionEmployee::Show()
 {
 	cout << "雇员类型:带底薪的佣金雇员" << endl;

@@ -11,6 +11,27 @@ using namespace std;
 //vector<BasePlusCommissionEmployee>BE;
 vector<Employee*>Emp;
 
+void fun(Employee *point) //强制类型转换
+{
+	if (typeid(*point) == typeid(SalariedEmployee))
+	{
+		SalariedEmployee *p1 = dynamic_cast<SalariedEmployee*>(point);
+	}
+	if (typeid(*point) == typeid(HourlyEmployee))
+	{
+		HourlyEmployee *p2 = dynamic_cast<HourlyEmployee*>(point);
+	}
+	if (typeid(*point) == typeid(CommissionEmployee))
+	{
+		CommissionEmployee *p3 = dynamic_cast<CommissionEmployee*>(point);
+	}
+	if (typeid(*point) == typeid(BasePlusCommissionEmployee*))
+	{
+		BasePlusCommissionEmployee *p4 = dynamic_cast<BasePlusCommissionEmployee*>(point);
+	}
+
+}
+
 void Add()
 {
 	system("CLS");
@@ -55,8 +76,49 @@ void Show()
 	system("CLS");
 	for (int i = 0 ; i < size(Emp) ; i++)
 	{
+		fun(Emp[i]);//强制类型转换
 		Emp[i] ->Show();
 		cout << endl;
+	}
+	cout << "按任意键返回主菜单" << endl;
+	getch();
+	Menu();
+}
+
+void FindID()
+{
+	system("CLS");
+	int id;
+	cout << "输入查询的ID" << endl;
+	cin >> id;
+	for (int i = 0; i < size(Emp); i++)
+	{
+		if(Emp[i]->EmployeeID == id)
+		{
+			Emp[i]->Show();
+			cout << endl;
+			break;
+		}
+	}
+	cout << "按任意键返回主菜单" << endl;
+	getch();
+	Menu();
+}
+
+void FindName()
+{
+	system("CLS");
+	string name;
+	cout << "输入查询的姓名" << endl;
+	cin >> name;
+	for (int i = 0; i < size(Emp); i++)
+	{
+		if (Emp[i]->EmployeeName == name)
+		{
+			Emp[i]->Show();
+			cout << endl;
+			break;
+		}
 	}
 	cout << "按任意键返回主菜单" << endl;
 	getch();
@@ -217,6 +279,7 @@ void Delete()
 	Menu();
 }
 
+
 void Menu()
 {
 	system("CLS");
@@ -229,7 +292,9 @@ void Menu()
 	cout << "5.显示所有佣金雇员信息" << endl;
 	cout << "6.显示所有带底薪佣金雇员信息" << endl;
 	cout << "7.删除所有员工信息" << endl;
-	cout << "8.退出" << endl;
+	cout << "8.根据ID查询雇员" << endl;
+	cout << "9.根据姓名查询雇员" << endl;
+	cout << "10.退出" << endl;
 	cin >> select;
 	switch (select)
 	{
@@ -257,6 +322,12 @@ void Menu()
 		Delete();
 		break;
 	case 8:
+		FindID();
+		break;
+	case 9:
+		FindName();
+		break;
+	case 10:
 		exit(0);
 		break;
 	default :
@@ -265,3 +336,4 @@ void Menu()
 		break;
 	}
 }
+

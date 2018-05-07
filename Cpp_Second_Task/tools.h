@@ -1,7 +1,7 @@
 #pragma once
 #ifndef TOOLS_H
 #define TOOLS_H
-
+#include"Employee.h"
 //void AddEmployee();
 //
 //void ShowEmployee();
@@ -22,5 +22,9 @@ void Add();
 
 void Delete();
 
+void FindID();
 
+void FindName();
+
+void fun(Employee *point);
 #endif
