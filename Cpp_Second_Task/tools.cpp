@@ -16,18 +16,25 @@ void fun(Employee *point) //强制类型转换
 	if (typeid(*point) == typeid(SalariedEmployee))
 	{
 		SalariedEmployee *p1 = dynamic_cast<SalariedEmployee*>(point);
+		p1->Show();
 	}
+
 	if (typeid(*point) == typeid(HourlyEmployee))
 	{
 		HourlyEmployee *p2 = dynamic_cast<HourlyEmployee*>(point);
+		p2->Show();
 	}
+
 	if (typeid(*point) == typeid(CommissionEmployee))
 	{
 		CommissionEmployee *p3 = dynamic_cast<CommissionEmployee*>(point);
+		p3->Show();
 	}
-	if (typeid(*point) == typeid(BasePlusCommissionEmployee*))
+
+	if (typeid(*point) == typeid(BasePlusCommissionEmployee))
 	{
 		BasePlusCommissionEmployee *p4 = dynamic_cast<BasePlusCommissionEmployee*>(point);
+		p4->Show();
 	}
 
 }
@@ -77,7 +84,6 @@ void Show()
 	for (int i = 0 ; i < size(Emp) ; i++)
 	{
 		fun(Emp[i]);//强制类型转换
-		Emp[i] ->Show();
 		cout << endl;
 	}
 	cout << "按任意键返回主菜单" << endl;
@@ -95,7 +101,7 @@ void FindID()
 	{
 		if(Emp[i]->EmployeeID == id)
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 			cout << endl;
 			break;
 		}
@@ -115,7 +121,7 @@ void FindName()
 	{
 		if (Emp[i]->EmployeeName == name)
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 			cout << endl;
 			break;
 		}
@@ -132,7 +138,7 @@ void ShowSE()
 	{
 		if (typeid(*Emp[i]) == typeid(SalariedEmployee))
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 		}
 	}
 	cout << "按任意键返回主菜单" << endl;
@@ -147,7 +153,7 @@ void ShowHE()
 	{
 		if (typeid(*Emp[i]) == typeid(HourlyEmployee))
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 		}
 	}
 	cout << "按任意键返回主菜单" << endl;
@@ -162,7 +168,7 @@ void ShowCE()
 	{
 		if (typeid(*Emp[i]) == typeid(CommissionEmployee))
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 		}
 	}
 	cout << "按任意键返回主菜单" << endl;
@@ -177,7 +183,7 @@ void ShowBE()
 	{
 		if (typeid(*Emp[i]) == typeid(BasePlusCommissionEmployee))
 		{
-			Emp[i]->Show();
+			fun(Emp[i]);
 		}
 	}
 	cout << "按任意键返回主菜单" << endl;
